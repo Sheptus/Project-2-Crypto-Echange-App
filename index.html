@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crypto currency</title>
+
+    <link rel="shortcut icon" href="./images/ img1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap/mdb.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla|Lato|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body id="all-content">
+    <header>
+        <div class="parallax">
+            <p class="project-title col-xs-6 col-md-3">
+                CryptoNight Currencies Information
+            </p>
+        </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="coins" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" id="live-reports" href="#">Live Reports</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" id="about" href="#">About</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Enter Coin Symbol">
+                    <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <div class="loader" style="display:none" id="loading">
+
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+
+        </div>
+        <div id="chartContainer" style="height: 300px; width: 100%; display:none;"></div>
+
+        <div id="about-page-content" style="display:none;">
+            <div class="row">
+                <div class="col-md-1 col-sm-1 col-xs-0"></div>
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <img src="./images/Me.jpg" alt="pic-of-me" id="about-img">
+                </div>
+                <h2 class="col-md-1 col-sm-6 col-xs-6" id="about-header">About</h2>
+                <div class="col-md-4 col-sm-6 col-xs-6" id="about-body">
+                    <p>
+                        <h2>Name: Sergey Sheptutsalov</h2>
+                    </p>
+                    <p>
+                        <h2>Age: 29</h2>
+                    </p>
+                    <p>
+                        <h4> This is my 2nd Course project,</h4>
+                        <h4>In This project i build an applictaion for Crypto currencies.</h4>
+                        <h4>Using jQuery Ajax calling request for coins API, JavaScript, Css and Bootstrap.</h4>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="each-coin">
+
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close cancel-changes" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Currently added coins</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="currently-added-coins row">
+                            <div class="col-md-6">Coin name</div>
+                            <div class="col-md-6">
+                                <input type="checkbox" class="toggle">
+                            </div>
+
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success save-changes">Save Changes</button>
+                            <button type="button" class="btn btn-danger cancel-changes">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="live-reports-chart" style="height:400px;"></div>
+
+
+        <script src="./scripts/lib/jquery-3.4.1.min.js"></script>
+        <script src="./scripts/lib/bootstrap.min.js"></script>
+        <script src="./scripts/lib/mdb.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./scripts/main.js"></script>
+
+
+</body>
+
+</html>
